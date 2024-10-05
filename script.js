@@ -8,3 +8,11 @@ function recursiveCalls(){
   counter ++;
   recursiveCalls();
 }
+
+try {
+  recursiveCalls()
+} catch(error) {
+  console.log("Stack overflow error caught!");
+  console.log("number of recursive calls made: " + counter);
+  console.log("Error details: ", error.message);
+}
